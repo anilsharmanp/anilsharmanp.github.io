@@ -25,7 +25,7 @@ abstract: The excitation scheme of the 69Ga (Z = 31, N = 38) nucleus has been st
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
 tags:
-- Source Themes
+- 69Ga transitional behaviour
 featured: false
 
 links:

@@ -41,9 +41,10 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        My thesis aims to study the nuclear structure of nuclei near shell closures, especially those around the doubly-magic $^{56}$Ni (Z=28, N=28) core. Both experimental methods—such as in-beam gamma-ray spectroscopy with large detector arrays—and theoretical approaches using large-scale shell model calculations will be used. Nuclear excitations is the primary focus for this work, which leads us to understand the mechanism of generation of the angular momentum in nuclei.
+        My thesis aims to study the nuclear structure of nuclei near shell closures, especially those around the doubly-magic 56Ni core. Both experimental methods—such as in-beam gamma-ray spectroscopy with large detector arrays—and theoretical approaches using large-scale shell model calculations will be used. Nuclear excitations is the primary focus for this work, which leads us to understand the mechanism of generation of the angular momentum in nuclei.
 
-        Please reach out to collaborate 😃
+  		Recently, our paper on 69Ga nucleus accepted in Physics Review C journal where we established the collective excitations builds upon the single particle excitation scheme.
+  
     design:
       columns: '1'
   - block: collection
