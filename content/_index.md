@@ -49,17 +49,7 @@ sections:
   - block: collection
     id: papers
     content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
-  - block: collection
-    content:
-      title: Recent Publications
+      title: Publications
       text: ''
       filters:
         folders:
