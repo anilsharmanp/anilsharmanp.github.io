@@ -51,11 +51,7 @@ education:
     start: 2023-03-19
     end: 2028-03-19
     summary: |
-      PhD in present.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
+      Working in nuclear structure.
   - degree: M.Sc in Nuclear Physics
     institution: University of Delhi (Hansraj College)
     start: 2019-07-01
