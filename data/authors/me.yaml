@@ -22,7 +22,7 @@ bio: |
 
 affiliations:
   - name: UGC-DAE Consoritum for Scientific Research, Kolkata Centre
-    url: https://ihc.res.in
+    url: https://iuc.res.in
 
 links:
   - icon: at-symbol
@@ -49,7 +49,7 @@ education:
   - degree: PhD in Nuclear Physics
     institution: UGC-DAE Consoritum for Scientific Research, Kolkata Centre
     start: 2023-03-19
-    end: Present
+    end: 2028-03-19
     summary: |
       Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
     button:
