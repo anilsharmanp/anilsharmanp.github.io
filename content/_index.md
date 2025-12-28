@@ -46,7 +46,7 @@ sections:
     design:
       columns: '1'
   - block: collection
-    id: publications
+    id: papers
     content:
       title: Publications
 #      text: ''
