@@ -64,6 +64,6 @@ sections:
         folders:
           - events
     design:
-      view: card
+      view: article-grid
       columns: 2
 ---
