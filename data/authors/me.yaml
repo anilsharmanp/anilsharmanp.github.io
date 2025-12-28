@@ -90,8 +90,6 @@ skills:
         level: 3
       - label: Geant4
         level: 3
-      - label: LateX
-        level: 4
   - name: Hobbies
     items:
       - label: Cooking

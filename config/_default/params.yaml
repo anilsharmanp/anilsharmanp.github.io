@@ -110,6 +110,9 @@ hugoblox:
     # Custom footer text (HTML supported)
     text: ""
 
+  # for favicon icon
+  favicon: /favicon.ico
+
   # ────────────────────────────────────────────────────────────────────────────
   # COPYRIGHT
   # Legal notices and licensing
