@@ -30,7 +30,7 @@ links:
   - icon: brands/x
     url: https://x.com/anils9738
   - icon: brands/github
-    url: https://github.com/Hachiman512
+    url: https://github.com/anilsharmanp
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/anil-sharma-6bb574198/
   - icon: academicons/google-scholar
@@ -92,6 +92,14 @@ skills:
         level: 3
       - label: LateX
         level: 4
+  - name: Hobbies
+    items:
+      - label: Cooking
+        level: 5
+      - label: Table tennis
+        level: 3
+      - label: Gymnasium
+        level: 5
 
 languages:
   - name: Hindi
