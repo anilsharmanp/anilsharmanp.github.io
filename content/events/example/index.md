@@ -45,12 +45,13 @@ links:
 #  - icon: brands/youtube
 #    name: Video Tutorial
 #    url: https://www.youtube.com/
-  - icon: book-open
-    name: Documentation
-    url: /DAE24_69Ga.pdf
+#  - icon: book-open
+#    name: Documentation
+#    url: /DAE24_69Ga.pdf
 
 # Link to your Markdown slides
-slides: "example"
+#slides: "example"
+slides: "/DAE24_69Ga.pdf"
 
 projects: []
 ---
