@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html 
+
+	lang="en"> 
+	<head> <meta charset="UTF-8"> 
+		<title>Anil Sharma | CV</title> 
+		<link rel="stylesheet" href="assets/css/style.css"> 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+	</head>
+
+<body>
+
+<div class="page-layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <div class="resume-header">
+            <img src="assets/images/anil.jpg" alt="Anil Sharma" class="profile-pic">
+
+            <h1>Anil Sharma</h1>
+            <p>Senior Research Fellow (SRF)</p>
+            <p>UGC–DAE CSR, Kolkata Centre, India</p>
+
+            <div class="links">
+                <a href="mailto:anilsharma051299@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=63dwrioAAAAJ&hl=en"><i class="ai ai-google-scholar"></i></a>
+                <a href="https://orcid.org/0009-0004-1382-2393"><i class="fab fa-orcid"></i></a>
+                <a href="https://github.com/anilsharmanp"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anil-sharma-6bb574198/"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <nav class="side-nav">
+                <a href="index.html">About me</a>
+                <a href="index.html">Research</a>
+                <a href="index.html">Education</a>
+                <a href="index.html">Publications</a>
+                <a href="index.html">Talks</a>
+                <a href="index.html">Reach out</a>
+                <a href="cv.html">Download CV</a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- RIGHT CONTENT -->
+    <main class="content">
+
+		<section id="cv" class="resume-section">
+		    <h2>Curriculum Vitae</h2>
+
+			<div class="cv-viewer">
+			    <iframe src="assets/cv.pdf"></iframe>
+			</div>
+
+		</section>
+	</main>
+
+</div>
+
+
+<script>
+const myNames = ["Anil Sharma", "A. Sharma"];
+
+document.querySelectorAll(".pub-list li").forEach(item => {
+    let html = item.innerHTML;
+
+    myNames.forEach(name => {
+        const regex = new RegExp(name, "g");
+        html = html.replace(regex, `<span class="me">${name}</span>`);
+    });
+
+    item.innerHTML = html;
+});
+</script>
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".side-nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+
+/* Also highlight immediately on click */
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+    });
+});
+</script>
+
+<footer>
+    © 2026 Anil Sharma
+</footer>
+
+</body>
+</html>

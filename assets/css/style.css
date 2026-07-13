@@ -1,0 +1,343 @@
+/* ===== General Layout ===== */
+body {
+    font-family: "Lora", Georgia, serif;   /* content font */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, nav a {
+    font-family: "Open Sans", sans-serif;  /* clean headings */
+}
+
+
+
+/* ===== Resume Layout ===== */
+.resume-container {
+max-width: 900px;
+margin: auto;
+padding: 20px;
+}
+
+.resume-header {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.resume-header h1 {
+margin-bottom: 5px;
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -0.08rem;
+}
+
+.resume-header p {
+margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* ===== Sections ===== */
+.resume-section {
+margin-top: 25px;
+}
+
+.resume-section h2 {
+    border-top: 3px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 4px 0;
+    font-size: 2.0rem;
+    font-weight: 700;
+    letter-spacing: -0.03rem;
+}
+
+/* ===== Items ===== */
+.item {
+margin-top: 15px;
+}
+
+.item h3 {
+margin: 0;
+}
+
+.item span {
+font-size: 0.9rem;
+color: #777;
+}
+
+/* ===== Links ===== */
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #444;
+    transition: 0.2s ease;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #2563eb;
+    transform: scale(1.2);
+}
+
+/* ===== Footer ===== */
+footer {
+text-align: center;
+padding: 2px;
+margin-top: 40px;
+background: #f1f1f1;
+color: #555;
+}
+
+.profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    margin-bottom: 1px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: white;
+    padding-bottom: 10px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Optional: make header compact when scrolling feel better */
+.resume-header {
+    padding-top: 15px;
+}
+
+/* Keep nav visible and separated */
+nav {
+    margin-top: 1px;
+    padding: 1px 0;
+    border-top: 1px solid #eee;
+}
+
+/* ===== Layout ===== */
+.page-layout {
+    display: flex;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: 300px;
+    height: 110vh;
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+/* ===== Content ===== */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+/* ===== Profile Styling ===== */
+.sidebar .resume-header {
+    text-align: center;
+}
+
+.sidebar .profile-pic {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* ===== Sidebar Navigation ===== */
+.side-nav {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+
+/* ===== Sidebar Navigation (Compact Rounded Buttons) ===== */
+.side-nav a {
+    display: block;
+    margin: 1px 2px;           /* spacing between buttons */
+    font-size: 0.95rem;         /* slightly smaller text */
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 999px;
+}
+/* Hover effect */
+.side-nav a:hover {
+    background: #000;
+    color: #fff;
+/*    padding-left: 14px;*/
+}
+
+/* Active section */
+.side-nav a.active {
+    background: #000;
+    color: #fff;
+    border-left: 4px solid #2563eb;
+/*    padding-left: 10px;*/
+}
+
+/* ===== Fix scroll offset ===== */
+section {
+    scroll-margin-top: 20px;
+}
+
+/* ===== Subsection Titles ===== */
+.subsection h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111;
+
+    border-left: 4px solid #000;
+    padding-left: 8px;
+}
+
+/* ===== Publication List ===== */
+.pub-list {
+    list-style: none;        /* remove default bullets */
+    padding-left: 0;
+    counter-reset: item;
+}
+
+.pub-list li {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    padding-left: 35px;      /* space for number */
+    counter-increment: item;
+}
+
+/* Numbering */
+.pub-list li::before {
+    content: "[" counter(item) "] ";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-weight: 600;
+    color: #000;
+}
+
+/* Journal style */
+.pub-list em {
+    color: #555;
+    font-style: italic;
+}
+
+.me {
+    font-weight: bold;
+    color: #000;
+}
+
+/* ===== CV Viewer ===== */
+.cv-viewer {
+    width: 100%;
+    height: 85vh;   /* almost full screen */
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+.cv-viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ===== Mobile Section ===== */
+@media (max-width: 768px) {
+
+    /* Stack layout */
+    .page-layout {
+        flex-direction: column;
+    }
+
+    /* Sidebar becomes top header */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 10px;
+    }
+
+    /* Reduce profile size */
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .resume-header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* NAV becomes horizontal scroll */
+    .side-nav {
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 999;
+    }
+    
+    .side-nav a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        white-space: nowrap;   /* prevents wrapping */
+    }
+
+    /* Content padding smaller */
+    .content {
+        padding: 15px;
+    }
+
+    /* Section titles smaller */
+    .resume-section h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Subsection titles */
+    .subsection h3 {
+        font-size: 1.2rem;
+    }
+
+    /* CV viewer smaller */
+    .cv-viewer {
+        height: 60vh;
+    }
+}
