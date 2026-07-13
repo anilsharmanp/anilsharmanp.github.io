@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 
 <html 
-
 	lang="en"> 
+
 	<head> <meta charset="UTF-8"> 
 		<title>Anil Sharma | CV</title> 
 		<link rel="stylesheet" href="assets/css/style.css"> 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;900&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 <body>
@@ -60,51 +61,51 @@
 </div>
 
 
-<script>
-const myNames = ["Anil Sharma", "A. Sharma"];
+		<script>
+		const myNames = ["Anil Sharma", "A. Sharma"];
 
-document.querySelectorAll(".pub-list li").forEach(item => {
-    let html = item.innerHTML;
+		document.querySelectorAll(".pub-list li").forEach(item => {
+			let html = item.innerHTML;
 
-    myNames.forEach(name => {
-        const regex = new RegExp(name, "g");
-        html = html.replace(regex, `<span class="me">${name}</span>`);
-    });
+			myNames.forEach(name => {
+				const regex = new RegExp(name, "g");
+				html = html.replace(regex, `<span class="me">${name}</span>`);
+			});
 
-    item.innerHTML = html;
-});
-</script>
+			item.innerHTML = html;
+		});
+		</script>
 
-<script>
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".side-nav a");
+		<script>
+		const sections = document.querySelectorAll("section");
+		const navLinks = document.querySelectorAll(".side-nav a");
 
-window.addEventListener("scroll", () => {
-    let current = "";
+		window.addEventListener("scroll", () => {
+			let current = "";
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (pageYOffset >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
+			sections.forEach(section => {
+				const sectionTop = section.offsetTop - 120;
+				if (pageYOffset >= sectionTop) {
+					current = section.getAttribute("id");
+				}
+			});
 
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-});
+			navLinks.forEach(link => {
+				link.classList.remove("active");
+				if (link.getAttribute("href") === "#" + current) {
+					link.classList.add("active");
+				}
+			});
+		});
 
-/* Also highlight immediately on click */
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.forEach(l => l.classList.remove("active"));
-        link.classList.add("active");
-    });
-});
-</script>
+		/* Also highlight immediately on click */
+		navLinks.forEach(link => {
+			link.addEventListener("click", () => {
+				navLinks.forEach(l => l.classList.remove("active"));
+				link.classList.add("active");
+			});
+		});
+		</script>
 
 <footer>
     © 2026 Anil Sharma
