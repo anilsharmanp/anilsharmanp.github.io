@@ -306,6 +306,229 @@ section {
     text-align: right;
 }
 
+/* ===== Talk Layout ===== */
+.talk-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Left text */
+.talk-content {
+    flex: 2;
+    font-size: 0.95rem;
+}
+
+/* Right image */
+.talk-preview {
+    flex: 1;
+    max-width: 220px;
+}
+
+.talk-preview img {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover zoom */
+.talk-preview img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== Image Preview Modal ===== */
+.img-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.img-modal-content {
+    display: block;
+    margin: auto;
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 6px;
+}
+
+.img-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* Optional: zoom animation */
+.img-modal-content {
+    animation: zoomIn 0.2s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+
+/* ===== Responsive Map ===== */
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ===== Research Grid ===== */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* ===== Research Card ===== */
+.research-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Image */
+.research-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Title */
+.research-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 10px;
+}
+
+/* Text */
+.research-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 10px 15px;
+    line-height: 1.5;
+}
+
+.research-detail {
+    max-width: 800px;
+    margin: auto;
+}
+
+.research-hero {
+    text-align: center;   /* centers image */
+    margin: 20px 0;
+}
+
+.research-hero img {
+    max-width: 70%;       /* responsive */
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.research-hero img:hover {
+    transform: scale(1.02);
+}
+
+/* Meta info (chips style) */
+.research-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.research-meta span {
+    background: #f3f4f6;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Highlights */
+.research-highlights {
+    margin-top: 20px;
+}
+
+.research-highlights h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.research-highlights ul {
+    padding-left: 20px;
+}
+
+.research-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.research-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.research-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.img-card {
+    text-align: center;   /* centers everything inside */
+}
+
+.img-card p {
+    text-align: center;   /* ensures caption is centered */
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 6px;
+}
 
 /* ===== Mobile Section ===== */
 @media (max-width: 768px) {
@@ -378,5 +601,13 @@ section {
     .footer-left,
     .footer-right {
         text-align: center;
+    }
+
+    .talk-item {
+        flex-direction: column;
+    }
+
+    .talk-preview {
+        max-width: 100%;
     }
 }

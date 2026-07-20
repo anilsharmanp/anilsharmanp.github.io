@@ -33,34 +33,80 @@
                 <a href="https://www.linkedin.com/in/anil-sharma-6bb574198/"><i class="fab fa-linkedin"></i></a>
             </div>
 
-            <nav class="side-nav">
-                <a href="index.html">About me</a>
-                <a href="index.html">Research</a>
+					
+					<nav class="side-nav">
+		                <a href="index.html">About me</a>
+		                <a href="index.html">Research</a>
 					<!--	<a href="#education">Education</a> -->
-                <a href="index.html">Publications</a>
-                <a href="index.html">Talks</a>
-                <a href="index.html">Reach out</a>
-                <a href="#cv">Download CV</a>
-            </nav>
-        </div>
-    </aside>
+		                <a href="index.html">Publications</a>
+		                <a href="index.html">Talks</a>
+		                <a href="index.html">Reach out</a>
+		                <a href="cv.html">Download CV</a>
+					</nav>
+					
+				</div>
+			</aside>
 
-    <!-- RIGHT CONTENT -->
-    <main class="content">
+			<!-- RIGHT CONTENT -->
+			<main class="content">
+				<section class="research-detail">
+
+				    <h2>Indian National Gamma Array (INGA) @ VECC</h2>
+
+				    <!-- Description -->
+				    <p>
+				        The Indian National Gamma Array (INGA) at VECC consists of Clover detectors,
+				        Low Energy Photon detectors, and CeBr scintillator arrays. It is used for
+				        high-resolution gamma-ray spectroscopy in nuclear structure studies.
+				    </p>
+				    <!-- Hero Image
+				    <div class="research-hero">
+				        <img src="assets/images/research/inga.jpg" alt="INGA VECC" 
+				        						             onclick="openPreview(this.src)">
+				    </div>
+					 -->
+
+				    <div class="research-gallery">
+				        <div class="img-card">
+				            <img src="assets/images/research/inga_vecc.jpg" onclick="openPreview(this.src)">
+				            <p>INGA Clover Detector Array consist of 11 Cloverm and one LEPS, later upgraded to
+				            7 more CeBr3 scintillator detectors</p>
+				        </div>
+				    
+				        <div class="img-card">
+				            <img src="assets/images/research/pixie.jpg" onclick="openPreview(this.src)">
+				            <p>Data Acquisition Setup by XIA, USA conceptualized by UGC-DAE CSR, Kolkata Centre
+				            <a href= "https://doi.org/10.1016/j.nima.2018.03.035" > (NIM, A 893 (2018) 138–145) </a>
+				            </p>
+				        </div>
+				    </div>
+
+				    <!-- Quick Info -->
+				    <div class="research-meta">
+				        <span><strong>Location:</strong> VECC, Kolkata</span>
+				        <span><strong>Type:</strong> Gamma-ray spectroscopy</span>
+				        <span><strong>Role:</strong> DAQ Support</span>
+				    </div>
 
 
-		<section id="cv" class="resume-section">
-		    <h2>Curriculum Vitae</h2>
+				    <p>
+				        I was part of the collaboration during the 2023–2025 campaign, contributing
+				        to detector setup, calibration, and data acquisition (DAQ) operations.
+				    </p>
 
-			<div class="cv-viewer">
-			    <iframe src="assets/cv.pdf"></iframe>
-			</div>
+				    <!-- Highlights -->
+				    <div class="research-highlights">
+				        <h3>Key Contributions</h3>
+				        <ul>
+				            <li>Configured DAQ system for coincidence measurements</li>
+				            <li>Participated in detector calibration using standard sources</li>
+				            <li>Handled in-beam gamma spectroscopy data collection</li>
+				        </ul>
+				    </div>
 
-		</section>
-	</main>
-
-</div>
-
+				</section>
+			</main>
+		</div>
 
 		<script>
 		const myNames = ["Anil Sharma", "A. Sharma"];
@@ -107,6 +153,34 @@
 			});
 		});
 		</script>
+
+		<script>
+		function openPreview(src) {
+		    const win = window.open("");
+		    win.document.write(`<img src="${src}" style="width:100%">`);
+		}
+		</script>
+
+<!-- Image Preview Modal -->
+<div id="imgModal" class="img-modal" onclick="closePreview()">
+    <span class="img-close">&times;</span>
+    <img class="img-modal-content" id="imgPreview">
+</div>
+
+<script>
+function openPreview(src) {
+    const modal = document.getElementById("imgModal");
+    const img = document.getElementById("imgPreview");
+
+    img.src = src;
+    modal.style.display = "block";
+}
+
+function closePreview() {
+    document.getElementById("imgModal").style.display = "none";
+}
+</script>
+
 
 		<footer class="site-footer">
 		    <div class="footer-left">
